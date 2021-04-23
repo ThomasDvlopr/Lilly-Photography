@@ -1,0 +1,400 @@
+<style>
+	header {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+	}
+
+	header nav ul {
+		display: flex;
+		margin-right: 180px;
+	}
+
+	nav {
+		width: 100%;
+		height: 5vh;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		background: white;
+	}
+
+	.foo {
+		position: fixed;
+		animation: showNav 1s ease-in-out;
+		z-index: 1000;
+	}
+
+	.foo2 {
+		animation: showNav 1.5s ease-in-out;
+		z-index: 1000;
+	}
+
+	@keyframes showNav {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.nav-link {
+		padding: 5px 15px;
+	}
+
+	.nav-link a {
+		font-size: 1.3rem;
+		padding: 5px 15px;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.nav-link a:hover {
+		color: #ff9900;
+	}
+
+	.nav-link a:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 100%;
+		bottom: 0;
+		left: 0;
+		background: black;
+		z-index: -1;
+		transition: all 0.1s cubic-bezier(0, 0.59, 1, 0.26);
+	}
+
+	.nav-link a:hover:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: black;
+		z-index: -1;
+	}
+
+	.section-header {
+		width: 100%;
+		height: 95vh;
+		position: relative;
+	}
+
+	.title-portfolio,
+	.title-portfolio2 {
+		width: 650px;
+		height: 120px;
+		overflow: hidden;
+		position: relative;
+		transform: rotate(-90deg);
+	}
+
+	.fixed {
+		position: fixed;
+	}
+
+	.title-portfolio {
+		top: 20%;
+		left: -150px;
+	}
+
+	.title-portfolio2 {
+		top: 35%;
+		left: -120px;
+	}
+
+	.portfolio {
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-transform: uppercase;
+		font-size: 6rem;
+		font-weight: bolder;
+	}
+
+	.portfolio2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		text-transform: uppercase;
+		font-size: 6.5rem;
+		font-weight: bolder;
+		color: #ff9900;
+	}
+
+	.images1-header,
+	.images2-header {
+		position: absolute;
+		bottom: -10px;
+	}
+
+	.images1-header {
+		right: 100px;
+		max-width: 650px;
+		max-height: 95vh;
+	}
+
+	.images2-header {
+		right: 0;
+		max-width: 700px;
+		max-height: 95vh;
+	}
+
+	.images1-header img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.5;
+	}
+
+	.images2-header img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.logo-site {
+		position: relative;
+		top: -50%;
+		left: 25%;
+		width: 320px;
+		height: 45px;
+		overflow: hidden;
+	}
+
+	.lilly-logo {
+		font-size: 2.2rem;
+		font-weight: 600;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 320px;
+		height: 45px;
+	}
+
+	.lilly-logo-back {
+		width: 100%;
+		height: 20px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: #ff9900;
+	}
+
+	.socials {
+		position: absolute;
+		bottom: 3vh;
+		left: 5vw;
+		display: flex;
+		overflow: hidden;
+	}
+
+	.socials a {
+		margin: 0 20px;
+		padding: 10px;
+		font-weight: 500;
+		transition: 0.2s ease-in-out;
+		cursor: pointer;
+		position: relative;
+	}
+
+	.socials a:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #ff9900;
+		z-index: -1;
+		transition: all 0.1s cubic-bezier(0, 0.59, 1, 0.26);
+	}
+
+	.socials a:hover:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: #ff9900;
+		z-index: -1;
+	}
+
+	@media screen and (max-width: 1300px) {
+		.title-portfolio {
+			top: 20%;
+			left: -250px;
+		}
+
+		.title-portfolio2 {
+			top: 35%;
+			left: -220px;
+		}
+
+		.portfolio {
+			font-size: 5rem;
+		}
+
+		.portfolio2 {
+			font-size: 5.5rem;
+		}
+
+		.images1-header {
+			right: -200px;
+		}
+
+		.images2-header {
+			right: -300px;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+		header nav ul {
+			margin-right: 80px;
+		}
+
+		.images1-header {
+			right: -300px;
+		}
+
+		.images2-header {
+			right: -400px;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		header {
+			background: url("https://drive.google.com/uc?export=view&id=1lUay-A5C6l8uskSCYYsWILF40deRToJM");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position-x: center;
+		}
+
+		header nav ul {
+			display: flex;
+			margin: 0 auto;
+		}
+
+		nav {
+			justify-content: center;
+		}
+
+		.nav-link {
+			padding: 5px 5px;
+		}
+
+		.nav-link a {
+			font-size: 1rem;
+			padding: 5px 5px;
+		}
+
+		.images1-header,
+		.images2-header {
+			display: none;
+		}
+
+		.title-portfolio,
+		.title-portfolio2 {
+			width: 320px;
+			height: 50px;
+			margin: 0 auto;
+			overflow: hidden;
+			position: relative;
+			transform: rotate(0deg);
+		}
+
+		.title-portfolio {
+			top: 65%;
+			left: 0;
+		}
+
+		.title-portfolio2 {
+			top: 75%;
+			left: 0;
+		}
+
+		.portfolio {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			text-transform: uppercase;
+			font-size: 3rem;
+			font-weight: bolder;
+			color: #ff99004d;
+		}
+
+		.portfolio2 {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			text-transform: uppercase;
+			font-size: 3rem;
+			font-weight: bolder;
+			color: #ff9900;
+		}
+
+		.logo-site {
+			position: relative;
+			top: -40%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 320px;
+			height: 45px;
+			overflow: hidden;
+		}
+
+		.lilly-logo {
+			font-size: 2.2rem;
+			font-weight: 600;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 320px;
+			height: 45px;
+			color: black;
+			text-align: center;
+		}
+
+		.lilly-logo-back {
+			width: 100%;
+			height: 45px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			background: #ff9900;
+		}
+
+		.socials {
+			position: absolute;
+			bottom: 3vh;
+			left: 50%;
+			transform: translateX(-50%);
+			display: flex;
+			overflow: hidden;
+		}
+
+		.socials a {
+			margin: 0 5px;
+			padding: 10px;
+			font-weight: 500;
+			transition: 0.2s ease-in-out;
+			cursor: pointer;
+			position: relative;
+			color: white;
+		}
+	}
+</style>
