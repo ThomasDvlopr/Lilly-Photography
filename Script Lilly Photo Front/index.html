@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lilly Photography</title>
+    <?!= include('main.css') ?>
+    <?!= include('config.css') ?>
+    <?!= include('header.css') ?>
+    <?!= include('slider.css') ?>
+    <?!= include('contact.css') ?>
+    <?!= include('footer.css') ?>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="Accueil">
+      <nav>
+        <ul>
+          <li class="nav-link"><a href="#Accueil">Accueil</a></li>
+          <li class="nav-link"><a href="#Book">Book</a></li>
+          <li class="nav-link contact"><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="section-header">
+        <div class="title-portfolio2">
+          <div class="portfolio2">portfolio</div>
+        </div>
+        <div class="title-portfolio">
+          <div class="portfolio">portfolio</div>
+        </div>
+        <div class="images1-header">
+          <img src="https://drive.google.com/uc?export=view&id=1ueL1OuPvbQ_ySeJa-yZ3ng_4Rt6i-eBh" alt="femme de profil" class="image1" />
+        </div>
+        <div class="images2-header">
+          <img src="https://drive.google.com/uc?export=view&id=1ueL1OuPvbQ_ySeJa-yZ3ng_4Rt6i-eBh" alt="femme de profil" class="image2" />
+        </div>
+      </section>
+      <div class="logo-site">
+        <div class="lilly-logo-back"></div>
+        <div class="lilly-logo">Lilly Photography</div>
+      </div>
+      <div class="socials">
+        <a href="https://fr-fr.facebook.com/" target="_blank">facebook</a>
+        <a href="https://www.instagram.com/?hl=fr" target="_blank">instagram</a>
+        <a href="https://www.tiktok.com/fr/" target="_blank">tiktok</a>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main id="Book">
+      <section class="section-book">
+        <div class="pics"></div>
+      </section>
+    </main>
+
+    <!-- SLIDER -->
+    <div class="slider-container">
+      <div class="bg-slider">
+        <div class="slide-container">
+          <!-- <img src="./pexels-nadezhda-diskant-5878801 (1).jpg" alt="" /> -->
+        </div>
+        <!-- SLIDER'S ARROWS -->
+        <div class="arrow-right">
+          <img src="https://drive.google.com/uc?export=view&id=1phXDzPzNKzIrmmlmcxs6AUOOuEGkUPql" alt="flèche droite" />
+        </div>
+        <div class="arrow-left">
+          <img src="https://drive.google.com/uc?export=view&id=1EpNxALiBIz1gDaIf9qSr6Xj9_DtF21Co" alt="flèche gauche" />
+        </div>
+        <div class="close-slider">
+          <img src="https://drive.google.com/uc?export=view&id=1RoqibEHF9owGtiW7vyRWNh-eiyjTsJ8K" alt="icône croix" />
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <div class="form-container">
+        <form id="form" autocomplete="off" method="post" onsubmit="event.preventDefault(); google.script.run.withSuccessHandler((data) => console.log('data', data)).processForm(this)">
+          <div class="inputs">
+            <div class="input-div">
+              <label for="lastname">Nom *</label><br />
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                value=""
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="firstname">Prénom *</label><br />
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                value=""
+                required
+              />
+            </div>
+            <div class="input-divl">
+              <label for="email">Email *</label><br />
+              <input type="text" id="email" name="email" value="" required />
+            </div>
+            <div class="input-div">
+              <label for="textarea">Votre message *</label><br />
+              <textarea
+                name="textarea"
+                id="textarea"
+                cols="30"
+                rows="10"
+                value=""
+              ></textarea>
+            </div>
+          </div>
+          <div class="submit">
+            <div class="close-msg"><span>Merci pour votre message</span></div>
+            <button type="submit" value="send">Envoyer</button>
+          </div>
+        </form>
+        <div class="close-form">
+          <img src="https://drive.google.com/uc?export=view&id=1RoqibEHF9owGtiW7vyRWNh-eiyjTsJ8K" alt="icône croix" />
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <span
+        >Libre de droits Lilly Photography® - Crédits photos :
+        <a href="https://www.pexels.com/fr-fr/" target="_blank" style="color: white"
+          >Pexels.com</a
+        >
+      </span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <?!= include('index.js') ?>
+    <?!= include('main.js') ?>
+    <?!= include('form.js') ?>
+  </body>
+</html>
+
