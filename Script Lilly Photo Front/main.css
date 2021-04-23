@@ -1,0 +1,65 @@
+<style>
+	main {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: flex-start;
+	}
+
+	.section-book {
+		width: 80%;
+		padding-top: 100px;
+	}
+
+	.pics {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.container-pic {
+		width: 350px;
+		height: 450px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 10px 0;
+		overflow: hidden;
+	}
+
+	.image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		cursor: pointer;
+	}
+
+	@media screen and (max-width: 1023px) {
+		main {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		.section-book {
+			width: 100%;
+			padding-top: 100px;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.container-pic {
+			width: 300px;
+			height: 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 10px 0;
+			overflow: hidden;
+		}
+	}
+</style>
